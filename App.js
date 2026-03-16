@@ -646,7 +646,7 @@ function COATimeline() {
         <div style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.25em", color: "#3b82f6", textTransform: "uppercase", marginBottom: 8 }}>
           NIKKI · POST-MILITARY TRANSITION · DECISION TIMELINE
         </div>
-        <h1 style={{ margin: "0 0 4px", fontSize: 26, fontWeight: 400, letterSpacing: "-0.02em", color: "#f1f5f9" }}>When Decisions Must Be Made</h1>
+        <h1 style={{ margin: "0 0 4px", fontSize: 26, fontWeight: 400, letterSpacing: "-0.02em", color: "#f1f5f9" }}>🚀 DEPLOY TEST — v2 — When Decisions Must Be Made</h1>
         <p style={{ margin: "0 0 24px", color: "#475569", fontSize: 13 }}>Hover any node for detail · Arrows show forcing functions · Diamond = decision gate</p>
 
         {/* Track legend */}
