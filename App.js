@@ -397,12 +397,12 @@ const MONTHS = [
 ];
 
 const TRACKS = [
-  { id: "urgent",  label: "🔴 URGENT",       color: "#ef4444", y: 110 },
-  { id: "school_ft", label: "🎓 SCHOOL (FT)", color: "#7c3aed", y: 170 },
-  { id: "emba",    label: "🎓 SCHOOL (PT)",   color: "#3b82f6", y: 240 },
-  { id: "work",    label: "💼 WORK",          color: "#f59e0b", y: 340 },
-  { id: "geo",     label: "📍 GEOGRAPHY",     color: "#a78bfa", y: 440 },
-  { id: "finance", label: "🏦 FINANCE",       color: "#4ade80", y: 560 },
+  { id: "urgent",  label: "🔴 URGENT",       color: "#ef4444", y: 90  },
+  { id: "school_ft", label: "🎓 SCHOOL (FT)", color: "#7c3aed", y: 175 },
+  { id: "emba",    label: "🎓 SCHOOL (PT)",   color: "#3b82f6", y: 265 },
+  { id: "work",    label: "💼 WORK",          color: "#f59e0b", y: 360 },
+  { id: "geo",     label: "📍 GEOGRAPHY",     color: "#a78bfa", y: 455 },
+  { id: "finance", label: "🏦 FINANCE",       color: "#4ade80", y: 550 },
 ];
 
 const NODES = [
@@ -433,7 +433,7 @@ const NODES = [
   {
     id: "booth_decision",
     track: "school_ft",
-    monthId: "apr2",
+    monthId: "apr",
     label: "Booth\nDecision",
     sublabel: "Apr 2 — hear back\nFull-time MBA",
     color: "#6d28d9",
@@ -618,7 +618,7 @@ const ARROWS = [
 ];
 
 const W = 1150;
-const H = 660;
+const H = 640;
 const NODE_H = 64;
 
 function getNodeX(node) {
