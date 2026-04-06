@@ -94,13 +94,13 @@ const initialCOAs = [
     synergies: [1, 4], conflicts: [5, 6, 10],
   },
   {
-    id: 10, category: "School · Part-Time", name: "Michigan Ross EMBA",
-    status: "Top Choice if EMBA", geo: "Ann Arbor / Hybrid",
-    flexScore: 4, incomeScore: 3, upsideScore: 4, geoScore: 2, jackScore: 3,
-    incomeNote: "Maintain income alongside", flexNote: "Hybrid -- some Ann Arbor residency",
-    upsideNote: "Top EMBA -- national brand, strong ops/strategy", geoNote: "Hybrid -- periodic Michigan travel required",
-    jackNote: "Some AA trips but base stays flexible",
-    notes: "Chosen school IF Nikki does an EMBA. Decision is between Ross, UCLA, or no MBA. Ross wins on national brand and program strength. Hybrid format means no full relocation. Ann Arbor residency trips are manageable. GI Bill applies. Key question: is the MBA worth the time and cost given the sim job + childcare reality?",
+    id: 10, category: "School · Part-Time", name: "Michigan Ross EMBA (LA Campus)",
+    status: "Top Choice if EMBA", geo: "Los Angeles (The Grand LA, downtown)",
+    flexScore: 4, incomeScore: 3, upsideScore: 5, geoScore: 4, jackScore: 4,
+    incomeNote: "Maintain income alongside", flexNote: "Once/month on campus -- very manageable",
+    upsideNote: "Top-5 EMBA -- national brand, first LA cohort", geoNote: "Downtown LA -- new dedicated campus",
+    jackNote: "LA campus = closer to LAX, first cohort prestige",
+    notes: "First cohort at the new dedicated Ross LA campus (The Grand LA, downtown). Once a month on campus, 21 months total, starts August 2026. Same curriculum and faculty as Ann Arbor. Only two joint residency trips to Ann Arbor required for the entire program. 20-25 hrs/wk study time outside class. GI Bill applies. First cohort = unique network opportunity. Key question: is the MBA ROI worth it given sim job essentially just covers childcare?",
     synergies: [1, 4], conflicts: [5, 6, 9],
   },
   {
@@ -408,7 +408,6 @@ const MONTHS = [
 
 const TRACKS = [
   { id: "urgent",  label: "🔴 URGENT",       color: "#ef4444", y: 90  },
-  { id: "school_ft", label: "🎓 SCHOOL (FT)", color: "#7c3aed", y: 175 },
   { id: "emba",    label: "🎓 SCHOOL (PT)",   color: "#3b82f6", y: 265 },
   { id: "work",    label: "💼 WORK",          color: "#f59e0b", y: 360 },
   { id: "geo",     label: "📍 GEOGRAPHY",     color: "#a78bfa", y: 455 },
@@ -431,41 +430,11 @@ const NODES = [
 
   // SCHOOL
   {
-    id: "stanford_decision",
-    track: "school_ft",
-    monthId: "apr2",
-    label: "Stanford GSB\nDecision",
-    sublabel: "Apr 2 — hear back\nFull-time MBA",
-    color: "#7c3aed",
-    border: "#c4b5fd",
-    width: 120,
-  },
-  {
-    id: "booth_decision",
-    track: "school_ft",
-    monthId: "apr",
-    label: "Booth\nDecision",
-    sublabel: "Apr 2 — hear back\nFull-time MBA",
-    color: "#6d28d9",
-    border: "#ddd6fe",
-    width: 110,
-  },
-  {
-    id: "emba_decision",
-    track: "emba",
-    monthId: "apr",
-    label: "UCLA / Ross\nDecision Arrives",
-    sublabel: "Ross = top choice if MBA\nUCLA still in consideration",
-    color: "#1d4ed8",
-    border: "#60a5fa",
-    width: 130,
-  },
-  {
     id: "emba_choose",
     track: "emba",
     monthId: "may",
-    label: "Decision:\nRoss, UCLA, or No MBA?",
-    sublabel: "3 paths: Ross EMBA,\nUCLA EMBA, or skip MBA",
+    label: "Ross EMBA\nor No MBA?",
+    sublabel: "Ross = top choice\nif doing EMBA",
     color: "#1e40af",
     border: "#93c5fd",
     width: 130,
@@ -623,8 +592,6 @@ const NODES = [
 
 // arrows: [fromId, toId, label?]
 const ARROWS = [
-  ["stanford_decision", "emba_choose"],
-  ["booth_decision", "emba_choose"],
   ["emba_decision", "emba_choose"],
   ["emba_choose", "emba_start"],
   ["emba_choose", "work_decide"],   // school choice affects work path
