@@ -408,7 +408,6 @@ const MONTHS = [
 
 const TRACKS = [
   { id: "urgent",  label: "🔴 URGENT",       color: "#ef4444", y: 90  },
-  { id: "school_ft", label: "🎓 SCHOOL (FT)", color: "#7c3aed", y: 175 },
   { id: "emba",    label: "🎓 SCHOOL (PT)",   color: "#3b82f6", y: 265 },
   { id: "work",    label: "💼 WORK",          color: "#f59e0b", y: 360 },
   { id: "geo",     label: "📍 GEOGRAPHY",     color: "#a78bfa", y: 455 },
@@ -431,41 +430,11 @@ const NODES = [
 
   // SCHOOL
   {
-    id: "stanford_decision",
-    track: "school_ft",
-    monthId: "apr2",
-    label: "Stanford GSB\nDecision",
-    sublabel: "Apr 2 — hear back\nFull-time MBA",
-    color: "#7c3aed",
-    border: "#c4b5fd",
-    width: 120,
-  },
-  {
-    id: "booth_decision",
-    track: "school_ft",
-    monthId: "apr",
-    label: "Booth\nDecision",
-    sublabel: "Apr 2 — hear back\nFull-time MBA",
-    color: "#6d28d9",
-    border: "#ddd6fe",
-    width: 110,
-  },
-  {
-    id: "emba_decision",
-    track: "emba",
-    monthId: "apr",
-    label: "UCLA / Ross\nDecision Arrives",
-    sublabel: "Ross = top choice if MBA\nUCLA still in consideration",
-    color: "#1d4ed8",
-    border: "#60a5fa",
-    width: 130,
-  },
-  {
     id: "emba_choose",
     track: "emba",
     monthId: "may",
-    label: "Decision:\nRoss, UCLA, or No MBA?",
-    sublabel: "3 paths: Ross EMBA,\nUCLA EMBA, or skip MBA",
+    label: "Ross EMBA\nor No MBA?",
+    sublabel: "Ross = top choice\nif doing EMBA",
     color: "#1e40af",
     border: "#93c5fd",
     width: 130,
@@ -623,8 +592,6 @@ const NODES = [
 
 // arrows: [fromId, toId, label?]
 const ARROWS = [
-  ["stanford_decision", "emba_choose"],
-  ["booth_decision", "emba_choose"],
   ["emba_decision", "emba_choose"],
   ["emba_choose", "emba_start"],
   ["emba_choose", "work_decide"],   // school choice affects work path
